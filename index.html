@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Carla Domingues · Solicitadora</title>
-<meta name="description" content="Carla Domingues, Solicitadora. Registos, contratos, documentos autenticados, arrendamentos e consultoria jurídica. Telefone 964 177 345." />
+<meta name="description" content="Carla Domingues, Solicitadora inscrita na OSAE, no Cadaval. Registos, contratos e documentos autenticados, arrendamentos, família e sucessões, e consultoria jurídica. Telefone 964 177 345." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -31,9 +31,11 @@
   header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
   .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;max-width:1080px;margin:0 auto}
   .brand{display:flex;align-items:center;gap:12px;min-width:0}
-  .brand img{height:40px;width:auto;flex:none}
   .brand .name{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:.01em;line-height:1;white-space:nowrap}
   .brand .role{font-family:var(--sans);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--crimson);margin-top:3px}
+  nav.menu{display:flex;align-items:center;gap:28px;margin-left:auto;margin-right:26px}
+  nav.menu a{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--ink-soft);transition:color .2s}
+  nav.menu a:hover{color:var(--crimson)}
   .callbtn{flex:none;font-family:var(--sans);font-weight:600;font-size:14px;color:#fff;background:var(--crimson);padding:10px 18px;border-radius:6px;white-space:nowrap;transition:background .2s}
   .callbtn:hover{background:var(--crimson-deep)}
 
@@ -46,15 +48,31 @@
   .hero .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--crimson);font-weight:600;margin-bottom:22px}
   .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(46px,9vw,84px);line-height:1.02;letter-spacing:.005em}
   .hero h1 span{display:block;font-style:italic;color:var(--crimson)}
-  .hero .lead{font-family:var(--serif);font-style:italic;font-size:clamp(20px,3.4vw,26px);color:var(--ink-soft);max-width:30ch;margin-top:26px}
+  .hero .lead{font-family:var(--serif);font-style:italic;font-size:clamp(20px,3.4vw,26px);color:var(--ink-soft);max-width:32ch;margin-top:26px}
   .hero .meta{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px 28px;font-size:14px;color:var(--muted)}
   .hero .meta strong{color:var(--ink);font-weight:600}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .btn-primary{font-family:var(--sans);font-weight:600;font-size:14.5px;color:#fff;background:var(--crimson);padding:13px 24px;border-radius:6px;transition:background .2s}
+  .btn-primary:hover{background:var(--crimson-deep)}
+  .btn-ghost{font-family:var(--sans);font-weight:600;font-size:14.5px;color:var(--ink);background:transparent;border:1px solid var(--rule);padding:13px 24px;border-radius:6px;transition:border-color .2s,color .2s}
+  .btn-ghost:hover{border-color:var(--crimson);color:var(--crimson)}
 
   /* Section shell */
   section.block{padding:80px 0}
   .kicker{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--crimson);font-weight:600;margin-bottom:14px}
   h2.title{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5vw,42px);line-height:1.1;margin-bottom:8px}
   .sub{color:var(--muted);font-size:16px;max-width:56ch;margin-bottom:44px}
+
+  /* Intro / o que é um solicitador */
+  .intro{background:var(--paper-warm);border-bottom:1px solid var(--rule)}
+  .intro-in{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start}
+  .intro p{font-size:17px;color:var(--ink-soft);margin-bottom:18px;max-width:52ch}
+  .intro p.first{font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.6vw,26px);color:var(--ink);line-height:1.35;max-width:24ch}
+  .intro .aside{border-left:2px solid var(--crimson);padding:6px 0 6px 26px}
+  .intro .aside .l{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--crimson);font-weight:600;margin-bottom:14px}
+  .intro .aside ul{list-style:none}
+  .intro .aside li{font-size:15px;color:var(--ink-soft);padding:9px 0;border-bottom:1px solid var(--rule)}
+  .intro .aside li:last-child{border-bottom:0}
 
   /* Services grid */
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -63,6 +81,35 @@
   .card .n{width:30px;height:2px;background:var(--crimson);margin-bottom:18px}
   .card h3{font-family:var(--serif);font-size:23px;font-weight:600;margin-bottom:10px;line-height:1.15}
   .card p{font-size:14.5px;color:var(--ink-soft)}
+
+  /* Approach / values */
+  .values{background:var(--paper-warm);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:8px}
+  .vbox .n{font-family:var(--serif);font-style:italic;font-size:26px;color:var(--crimson);margin-bottom:12px}
+  .vbox h3{font-family:var(--serif);font-size:21px;font-weight:600;margin-bottom:8px;line-height:1.2}
+  .vbox p{font-size:14.5px;color:var(--ink-soft)}
+
+  /* FAQ */
+  .faq details{border-bottom:1px solid var(--rule);padding:6px 0}
+  .faq summary{list-style:none;cursor:pointer;font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ink);padding:18px 40px 18px 0;position:relative}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:'+';position:absolute;right:6px;top:50%;transform:translateY(-50%);font-family:var(--sans);font-size:24px;font-weight:400;color:var(--crimson);transition:transform .2s}
+  .faq details[open] summary::after{content:'–'}
+  .faq .a{font-size:15.5px;color:var(--ink-soft);padding:0 40px 22px 0;max-width:66ch}
+
+  /* Marcar reunião — form */
+  .book{background:var(--paper-warm);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .windows{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 34px}
+  .windows .w{font-size:13.5px;color:var(--ink-soft);background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:8px 15px}
+  .windows .w strong{color:var(--crimson);font-weight:600}
+  .form{max-width:640px}
+  .field{margin-bottom:20px}
+  .field label{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin-bottom:8px}
+  .field label .opt{color:var(--muted);text-transform:none;letter-spacing:0;font-weight:400;font-size:12px}
+  .field input,.field textarea{width:100%;font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;transition:border-color .2s}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--crimson)}
+  .field textarea{min-height:120px;resize:vertical}
+  .book .note{font-size:13px;color:var(--muted);margin-top:14px}
 
   /* Contact */
   .contact{background:var(--ink);color:#f3efe9}
@@ -81,10 +128,14 @@
   footer{background:var(--paper-warm);border-top:1px solid var(--rule);padding:40px 0}
   .foot{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between;font-size:13px;color:var(--muted)}
   .foot .fn{font-family:var(--serif);font-size:17px;color:var(--ink)}
-  .foot img{height:30px;opacity:.9}
 
+  @media(max-width:900px){
+    nav.menu{display:none}
+  }
   @media(max-width:820px){
     .grid{grid-template-columns:1fr 1fr}
+    .vgrid{grid-template-columns:1fr 1fr}
+    .intro-in{grid-template-columns:1fr;gap:36px}
   }
   @media(max-width:760px){
     .hero-in{flex-direction:column;align-items:flex-start;gap:32px}
@@ -92,12 +143,14 @@
   }
   @media(max-width:600px){
     .grid{grid-template-columns:1fr}
+    .vgrid{grid-template-columns:1fr}
     .cgrid{grid-template-columns:1fr}
     .callbtn{padding:9px 14px;font-size:13px}
     .brand .name{font-size:19px}
     .hero-in{padding-top:52px;padding-bottom:52px}
     .hero-logo img{width:172px}
     section.block{padding:56px 0}
+    .btn-primary,.btn-ghost{padding:12px 18px}
   }
 </style>
 </head>
@@ -111,6 +164,14 @@
         <div class="role">Solicitadora</div>
       </div>
     </div>
+    <nav class="menu">
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">A profissão</a>
+      <a href="#abordagem">Abordagem</a>
+      <a href="#perguntas">Perguntas</a>
+      <a href="#marcar">Marcar</a>
+      <a href="#contactos">Contactos</a>
+    </nav>
     <a class="callbtn" href="tel:+351964177345">Ligar · 964 177 345</a>
   </div>
 </header>
@@ -128,11 +189,37 @@
         <span><strong>Registos</strong> · Predial, Automóvel e Comercial</span>
         <span><strong>Horário</strong> · 9h00 – 18h00, encerrado às terças</span>
       </div>
+      <div class="hero-cta">
+        <a class="btn-primary" href="#marcar">Marcar reunião</a>
+        <a class="btn-ghost" href="tel:+351964177345">Ligar · 964 177 345</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="block">
+<section class="block intro" id="sobre">
+  <div class="wrap intro-in">
+    <div>
+      <div class="kicker">O que é um Solicitador</div>
+      <p class="first">O apoio jurídico próximo, para os atos do dia a dia que exigem rigor legal.</p>
+      <p>O Solicitador é um profissional do foro, licenciado e inscrito na Ordem dos Solicitadores e dos Agentes de Execução (OSAE). Trata dos atos que dão segurança à sua vida e ao seu património: registos, contratos, autenticação de documentos, arrendamentos, sucessões e consultoria.</p>
+      <p>É, muitas vezes, a forma mais direta e acessível de resolver uma questão legal — com o acompanhamento de alguém que trata do seu processo do início ao fim, sem a distância de um grande escritório.</p>
+    </div>
+    <div class="aside">
+      <div class="l">Onde posso ajudar</div>
+      <ul>
+        <li>Registos prediais, automóveis e comerciais</li>
+        <li>Contratos e documentos particulares autenticados</li>
+        <li>Arrendamentos</li>
+        <li>Família, sucessões e partilhas</li>
+        <li>Reconhecimento de assinaturas e procurações</li>
+        <li>Consultoria fiscal, administrativa e civil</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="servicos">
   <div class="wrap">
     <div class="kicker">O que faço</div>
     <h2 class="title">Serviços</h2>
@@ -172,11 +259,98 @@
   </div>
 </section>
 
+<section class="block values" id="abordagem">
+  <div class="wrap">
+    <div class="kicker">A minha abordagem</div>
+    <h2 class="title">Como trabalho consigo</h2>
+    <p class="sub">Um trato próximo e claro, do primeiro contacto à conclusão do ato.</p>
+    <div class="vgrid">
+      <div class="vbox">
+        <div class="n">01</div>
+        <h3>Atendimento próximo</h3>
+        <p>Fala diretamente comigo. Sem intermediários, sem linguagem que afasta.</p>
+      </div>
+      <div class="vbox">
+        <div class="n">02</div>
+        <h3>Rigor e confiança</h3>
+        <p>Cada ato tratado com a precisão legal que a sua segurança exige.</p>
+      </div>
+      <div class="vbox">
+        <div class="n">03</div>
+        <h3>Inscrita na OSAE</h3>
+        <p>Profissional habilitada e regulada pela Ordem dos Solicitadores.</p>
+      </div>
+      <div class="vbox">
+        <div class="n">04</div>
+        <h3>Do início ao fim</h3>
+        <p>Acompanho o processo completo e explico cada passo pelo caminho.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block faq" id="perguntas">
+  <div class="wrap">
+    <div class="kicker">Perguntas frequentes</div>
+    <h2 class="title">Antes de me contactar</h2>
+    <p class="sub">Algumas dúvidas comuns. Se a sua não estiver aqui, ligue-me e explico com gosto.</p>
+    <details>
+      <summary>O que faz um Solicitador?</summary>
+      <div class="a">Presta apoio jurídico em atos como registos, contratos, autenticação de documentos, arrendamentos, sucessões e consultoria. É um profissional do foro, licenciado e inscrito na OSAE, próximo e acessível para as questões legais do dia a dia.</div>
+    </details>
+    <details>
+      <summary>Um Solicitador pode autenticar documentos?</summary>
+      <div class="a">Sim. Posso elaborar e autenticar documentos particulares — compra e venda, doações, partilhas — e reconhecer assinaturas, com a mesma validade legal exigida para esses atos.</div>
+    </details>
+    <details>
+      <summary>Que registos posso tratar?</summary>
+      <div class="a">Registo Predial, Automóvel e Comercial. Trato do processo por si, desde a preparação dos documentos até à conclusão do registo.</div>
+    </details>
+    <details>
+      <summary>Como marco uma reunião?</summary>
+      <div class="a">O atendimento é por telefone e no escritório. Ligue para o 964 177 345 dentro do horário (9h00 – 18h00, encerrado às terças-feiras) e combinamos a melhor altura para falar.</div>
+    </details>
+  </div>
+</section>
+
+<section class="block book" id="marcar">
+  <div class="wrap">
+    <div class="kicker">Marcar reunião</div>
+    <h2 class="title">Vamos falar pessoalmente</h2>
+    <p class="sub">As reuniões presenciais fazem-se nestes períodos. Outros horários, combinando comigo diretamente.</p>
+    <div class="windows">
+      <span class="w"><strong>Segunda</strong> · manhã</span>
+      <span class="w"><strong>Quarta</strong> · tarde</span>
+      <span class="w"><strong>Sexta</strong> · manhã</span>
+    </div>
+    <form class="form" id="bookform">
+      <div class="field">
+        <label for="f-nome">Identificação</label>
+        <input id="f-nome" name="nome" type="text" required autocomplete="name" />
+      </div>
+      <div class="field">
+        <label for="f-contacto">Contacto</label>
+        <input id="f-contacto" name="contacto" type="text" required placeholder="Telefone ou email" />
+      </div>
+      <div class="field">
+        <label for="f-processo">Número de processo <span class="opt">(se tiver)</span></label>
+        <input id="f-processo" name="processo" type="text" />
+      </div>
+      <div class="field">
+        <label for="f-assunto">Assunto</label>
+        <textarea id="f-assunto" name="assunto" required></textarea>
+      </div>
+      <button class="btn-primary" type="submit">Enviar pedido de marcação</button>
+      <p class="note">Ao enviar, abre-se o seu email já preenchido com os dados, para confirmar o envio a Carla Domingues.</p>
+    </form>
+  </div>
+</section>
+
 <section class="contact" id="contactos">
   <div class="wrap">
     <div class="kicker">Contactos</div>
-    <h2 class="title">Marque a sua deslocação</h2>
-    <p class="sub">Atendimento por telefone e no escritório. Fale comigo para agendar.</p>
+    <h2 class="title">Onde me encontra</h2>
+    <p class="sub">Atendimento por telefone e no escritório, no Cadaval. Fale comigo para agendar.</p>
     <div class="cgrid">
       <div class="cbox">
         <div class="l">Telefone</div>
@@ -188,11 +362,12 @@
       </div>
       <div class="cbox">
         <div class="l">Morada</div>
-        <div class="v small tbc">A confirmar</div>
+        <div class="v small">Rua 25 de Abril, 3<br>2550-165 Cadaval</div>
       </div>
       <div class="cbox">
         <div class="l">Email</div>
-        <div class="v small tbc">A confirmar</div>
+        <div class="v small"><a href="mailto:carlasolicitadora@hotmail.com">carlasolicitadora@hotmail.com</a></div>
+        <div class="v small" style="margin-top:10px"><a href="mailto:1878@solicitador.net">1878@solicitador.net</a></div>
       </div>
     </div>
   </div>
@@ -202,11 +377,39 @@
   <div class="wrap">
     <div class="foot">
       <span class="fn">Carla Domingues · Solicitadora</span>
-      <span>Membro da Ordem dos Solicitadores e dos Agentes de Execução · Cédula profissional a confirmar</span>
+      <span>Membro da Ordem dos Solicitadores e dos Agentes de Execução · Cédula profissional 1878</span>
       <span>© 2026</span>
     </div>
   </div>
 </footer>
+
+<script>
+  // Scheduling form → opens the visitor's own email, pre-filled, addressed to
+  // Carla. No third-party form processor: every request goes straight to her
+  // inbox, which keeps confidential client details off any outside service.
+  (function () {
+    var f = document.getElementById('bookform');
+    if (!f) return;
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var val = function (id) { var el = document.getElementById(id); return el ? (el.value || '').trim() : ''; };
+      var nome = val('f-nome');
+      var contacto = val('f-contacto');
+      var processo = val('f-processo');
+      var assunto = val('f-assunto');
+      var subject = 'Pedido de marcação' + (nome ? (' — ' + nome) : '');
+      var body =
+        'Identificação: ' + nome + '\n' +
+        'Contacto: ' + contacto + '\n' +
+        (processo ? ('Número de processo: ' + processo + '\n') : '') +
+        'Assunto:\n' + assunto + '\n';
+      window.location.href =
+        'mailto:carlasolicitadora@hotmail.com' +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+    });
+  })();
+</script>
 
 </body>
 </html>
