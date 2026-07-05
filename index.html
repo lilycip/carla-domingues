@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Carla Domingues · Solicitadora</title>
-<meta name="description" content="Carla Domingues, Solicitadora inscrita na OSAE, no Cadaval. Registos, contratos e documentos autenticados, arrendamentos, família e sucessões, e consultoria jurídica. Telefone 964 177 345." />
+<meta name="description" content="Carla Domingues, Solicitadora inscrita na OSAE, no Cadaval. Há mais de 30 anos ao seu lado: documentos autenticados e transmissão de imóveis, contratos, família e sucessões, direito comercial e de sociedades, atos notariais, registos. Telefone 964 177 345." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -31,9 +31,10 @@
   header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
   .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;max-width:1080px;margin:0 auto}
   .brand{display:flex;align-items:center;gap:12px;min-width:0}
+  .brand .osae-sm{flex:none;width:auto;height:42px;display:block}
   .brand .name{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:.01em;line-height:1;white-space:nowrap}
   .brand .role{font-family:var(--sans);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--crimson);margin-top:3px}
-  nav.menu{display:flex;align-items:center;gap:28px;margin-left:auto;margin-right:26px}
+  nav.menu{display:flex;align-items:center;gap:26px;margin-left:auto;margin-right:26px}
   nav.menu a{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--ink-soft);transition:color .2s}
   nav.menu a:hover{color:var(--crimson)}
   .callbtn{flex:none;font-family:var(--sans);font-weight:600;font-size:14px;color:#fff;background:var(--crimson);padding:10px 18px;border-radius:6px;white-space:nowrap;transition:background .2s}
@@ -41,46 +42,59 @@
 
   /* Hero */
   .hero{background:var(--paper-warm);border-bottom:1px solid var(--rule)}
-  .hero-in{display:flex;align-items:center;gap:60px;padding-top:72px;padding-bottom:72px}
-  .hero-logo{flex:none}
-  .hero-logo img{width:clamp(190px,24vw,300px);height:auto;display:block}
+  .hero-in{display:flex;align-items:center;gap:56px;padding-top:80px;padding-bottom:80px}
+  .hero-badge{flex:none;text-align:center}
+  .hero-badge .osae{width:clamp(158px,21vw,224px);height:auto;display:block;margin:0 auto}
+  .hero-badge .cap{margin-top:18px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .hero-badge .cap strong{color:var(--ink)}
   .hero-text{min-width:0}
-  .hero .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--crimson);font-weight:600;margin-bottom:22px}
+  .hero .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--crimson);font-weight:600;margin-bottom:20px}
   .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(46px,9vw,84px);line-height:1.02;letter-spacing:.005em}
   .hero h1 span{display:block;font-style:italic;color:var(--crimson)}
-  .hero .lead{font-family:var(--serif);font-style:italic;font-size:clamp(20px,3.4vw,26px);color:var(--ink-soft);max-width:32ch;margin-top:26px}
-  .hero .meta{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px 28px;font-size:14px;color:var(--muted)}
+  .hero .lead{font-family:var(--serif);font-style:italic;font-size:clamp(20px,3.2vw,27px);color:var(--ink-soft);max-width:30ch;margin-top:24px;line-height:1.3}
+  .hero .meta{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px 28px;font-size:14px;color:var(--muted)}
   .hero .meta strong{color:var(--ink);font-weight:600}
-  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
   .btn-primary{font-family:var(--sans);font-weight:600;font-size:14.5px;color:#fff;background:var(--crimson);padding:13px 24px;border-radius:6px;transition:background .2s}
   .btn-primary:hover{background:var(--crimson-deep)}
   .btn-ghost{font-family:var(--sans);font-weight:600;font-size:14.5px;color:var(--ink);background:transparent;border:1px solid var(--rule);padding:13px 24px;border-radius:6px;transition:border-color .2s,color .2s}
   .btn-ghost:hover{border-color:var(--crimson);color:var(--crimson)}
 
   /* Section shell */
-  section.block{padding:80px 0}
+  section.block{padding:82px 0}
   .kicker{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--crimson);font-weight:600;margin-bottom:14px}
   h2.title{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5vw,42px);line-height:1.1;margin-bottom:8px}
-  .sub{color:var(--muted);font-size:16px;max-width:56ch;margin-bottom:44px}
+  .sub{color:var(--muted);font-size:16px;max-width:58ch;margin-bottom:44px}
 
-  /* Intro / o que é um solicitador */
+  /* Intro / sobre + o que é um solicitador */
   .intro{background:var(--paper-warm);border-bottom:1px solid var(--rule)}
   .intro-in{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start}
-  .intro p{font-size:17px;color:var(--ink-soft);margin-bottom:18px;max-width:52ch}
-  .intro p.first{font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.6vw,26px);color:var(--ink);line-height:1.35;max-width:24ch}
+  .intro p{font-size:17px;color:var(--ink-soft);margin-bottom:18px;max-width:54ch}
+  .intro p.first{font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.6vw,27px);color:var(--ink);line-height:1.35;max-width:26ch;margin-bottom:22px}
   .intro .aside{border-left:2px solid var(--crimson);padding:6px 0 6px 26px}
   .intro .aside .l{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--crimson);font-weight:600;margin-bottom:14px}
   .intro .aside ul{list-style:none}
   .intro .aside li{font-size:15px;color:var(--ink-soft);padding:9px 0;border-bottom:1px solid var(--rule)}
   .intro .aside li:last-child{border-bottom:0}
 
-  /* Services grid */
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .card{border:1px solid var(--rule);border-radius:12px;padding:28px 26px;background:var(--paper);transition:border-color .2s,box-shadow .2s}
-  .card:hover{border-color:#d8cfc7;box-shadow:0 6px 22px rgba(28,28,28,.05)}
-  .card .n{width:30px;height:2px;background:var(--crimson);margin-bottom:18px}
-  .card h3{font-family:var(--serif);font-size:23px;font-weight:600;margin-bottom:10px;line-height:1.15}
-  .card p{font-size:14.5px;color:var(--ink-soft)}
+  /* Services — accordion of areas */
+  .svc-list{border-top:1px solid var(--rule)}
+  details.svc{border-bottom:1px solid var(--rule)}
+  details.svc summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:16px;padding:24px 44px 24px 0;position:relative}
+  details.svc summary::-webkit-details-marker{display:none}
+  details.svc summary::after{content:'+';position:absolute;right:4px;top:26px;font-family:var(--sans);font-size:26px;font-weight:400;color:var(--crimson);transition:transform .2s;line-height:1}
+  details.svc[open] summary::after{content:'–'}
+  details.svc .svc-t{font-family:var(--serif);font-size:clamp(24px,3.2vw,30px);font-weight:600;color:var(--ink);line-height:1.15;flex:none}
+  details.svc[open] .svc-t{color:var(--crimson)}
+  details.svc .svc-d{font-size:14.5px;color:var(--muted);align-self:center}
+  .svc-body{padding:2px 44px 30px 0}
+  .svc-note{font-size:15px;color:var(--ink-soft);margin-bottom:18px;max-width:64ch;font-style:italic}
+  .svc-items{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:2px 32px}
+  .svc-items li{font-size:15.5px;color:var(--ink-soft);padding:9px 0 9px 20px;position:relative;border-bottom:1px solid var(--rule)}
+  .svc-items li::before{content:'';position:absolute;left:0;top:17px;width:8px;height:2px;background:var(--crimson)}
+  .svc-closing{margin-top:34px;font-size:16px;color:var(--ink-soft);max-width:60ch}
+  .svc-closing a{color:var(--crimson);font-weight:600;border-bottom:1px solid transparent;transition:border-color .2s}
+  .svc-closing a:hover{border-bottom-color:var(--crimson)}
 
   /* Approach / values */
   .values{background:var(--paper-warm);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
@@ -122,7 +136,6 @@
   .cbox .v{font-family:var(--serif);font-size:24px;color:#fff}
   .cbox .v.small{font-size:19px;line-height:1.35}
   .cbox .v a:hover{color:var(--crimson)}
-  .tbc{color:#8a857d;font-style:italic;font-family:var(--sans);font-size:14px}
 
   /* Footer */
   footer{background:var(--paper-warm);border-top:1px solid var(--rule);padding:40px 0}
@@ -133,24 +146,23 @@
     nav.menu{display:none}
   }
   @media(max-width:820px){
-    .grid{grid-template-columns:1fr 1fr}
     .vgrid{grid-template-columns:1fr 1fr}
     .intro-in{grid-template-columns:1fr;gap:36px}
   }
   @media(max-width:760px){
-    .hero-in{flex-direction:column;align-items:flex-start;gap:32px}
-    .hero-logo img{width:200px}
+    .hero-in{flex-direction:column;align-items:flex-start;gap:36px}
   }
   @media(max-width:600px){
-    .grid{grid-template-columns:1fr}
     .vgrid{grid-template-columns:1fr}
     .cgrid{grid-template-columns:1fr}
+    .svc-items{grid-template-columns:1fr}
     .callbtn{padding:9px 14px;font-size:13px}
     .brand .name{font-size:19px}
-    .hero-in{padding-top:52px;padding-bottom:52px}
-    .hero-logo img{width:172px}
-    section.block{padding:56px 0}
+    .brand .mono{width:38px;height:38px;font-size:16px}
+    .hero-in{padding-top:56px;padding-bottom:56px}
+    section.block{padding:58px 0}
     .btn-primary,.btn-ghost{padding:12px 18px}
+    details.svc .svc-d{display:none}
   }
 </style>
 </head>
@@ -159,6 +171,7 @@
 <header>
   <div class="bar">
     <div class="brand">
+      <img class="osae-sm" src="assets/osae-logo.png" alt="Emblema da OSAE" />
       <div>
         <div class="name">Carla Domingues</div>
         <div class="role">Solicitadora</div>
@@ -166,7 +179,7 @@
     </div>
     <nav class="menu">
       <a href="#servicos">Serviços</a>
-      <a href="#sobre">A profissão</a>
+      <a href="#sobre">Sobre</a>
       <a href="#abordagem">Abordagem</a>
       <a href="#perguntas">Perguntas</a>
       <a href="#marcar">Marcar</a>
@@ -178,15 +191,16 @@
 
 <section class="hero">
   <div class="wrap hero-in">
-    <div class="hero-logo">
-      <img src="assets/osae-logo.jpg" alt="Ordem dos Solicitadores e dos Agentes de Execução" />
+    <div class="hero-badge">
+      <img class="osae" src="assets/osae-logo.png" alt="Emblema da Ordem dos Solicitadores e dos Agentes de Execução (OSAE)" />
+      <div class="cap">Inscrita na <strong>OSAE</strong> · Cédula 1878</div>
     </div>
     <div class="hero-text">
-      <div class="eyebrow">Solicitadora</div>
+      <div class="eyebrow">Solicitadora · Cadaval</div>
       <h1>Carla<br><span>Domingues</span></h1>
-      <p class="lead">Ao seu lado nos atos que exigem rigor e confiança.</p>
+      <p class="lead">Há mais de 30 anos a prestar serviços de Solicitadoria com rigor, proximidade e confiança.</p>
       <div class="meta">
-        <span><strong>Registos</strong> · Predial, Automóvel e Comercial</span>
+        <span><strong>+30 anos</strong> de experiência</span>
         <span><strong>Horário</strong> · 9h00 – 18h00, encerrado às terças</span>
       </div>
       <div class="hero-cta">
@@ -200,20 +214,20 @@
 <section class="block intro" id="sobre">
   <div class="wrap intro-in">
     <div>
-      <div class="kicker">O que é um Solicitador</div>
-      <p class="first">O apoio jurídico próximo, para os atos do dia a dia que exigem rigor legal.</p>
-      <p>O Solicitador é um profissional do foro, licenciado e inscrito na Ordem dos Solicitadores e dos Agentes de Execução (OSAE). Trata dos atos que dão segurança à sua vida e ao seu património: registos, contratos, autenticação de documentos, arrendamentos, sucessões e consultoria.</p>
-      <p>É, muitas vezes, a forma mais direta e acessível de resolver uma questão legal — com o acompanhamento de alguém que trata do seu processo do início ao fim, sem a distância de um grande escritório.</p>
+      <div class="kicker">Sobre</div>
+      <p class="first">Apoio jurídico próximo e rigoroso, para os atos que dão segurança à sua vida e ao seu património.</p>
+      <p>Com experiência na área da Solicitadoria, presto apoio próximo e rigoroso em atos jurídicos, registos, contratos, documentos autenticados, sucessões, arrendamentos e demais procedimentos administrativos.</p>
+      <p>O atendimento é personalizado, com acompanhamento em cada fase do processo, para garantir segurança, clareza e confiança em todos os atos praticados. O Solicitador é um profissional do foro, licenciado e inscrito na Ordem dos Solicitadores e dos Agentes de Execução (OSAE) — muitas vezes a forma mais direta e acessível de resolver uma questão legal, sem a distância de um grande escritório.</p>
     </div>
     <div class="aside">
-      <div class="l">Onde posso ajudar</div>
+      <div class="l">Áreas onde ajudo</div>
       <ul>
-        <li>Registos prediais, automóveis e comerciais</li>
-        <li>Contratos e documentos particulares autenticados</li>
-        <li>Arrendamentos</li>
-        <li>Família, sucessões e partilhas</li>
-        <li>Reconhecimento de assinaturas e procurações</li>
-        <li>Consultoria fiscal, administrativa e civil</li>
+        <li>Documentos autenticados e transmissão de imóveis</li>
+        <li>Contratos</li>
+        <li>Família e sucessões</li>
+        <li>Direito comercial e de sociedades</li>
+        <li>Atos notariais e certificações</li>
+        <li>Registos prediais e automóveis</li>
       </ul>
     </div>
   </div>
@@ -223,39 +237,114 @@
   <div class="wrap">
     <div class="kicker">O que faço</div>
     <h2 class="title">Serviços</h2>
-    <p class="sub">Acompanhamento jurídico próximo, do registo ao ato notarial, com o rigor que cada processo exige.</p>
-    <div class="grid">
-      <div class="card">
-        <div class="n"></div>
-        <h3>Registos</h3>
-        <p>Registo Predial, Automóvel e Comercial.</p>
-      </div>
-      <div class="card">
-        <div class="n"></div>
-        <h3>Contratos e documentos autenticados</h3>
-        <p>Contratos-promessa de compra e venda. Documentos particulares autenticados: compra e venda, doações, partilhas e divisão.</p>
-      </div>
-      <div class="card">
-        <div class="n"></div>
-        <h3>Família e sucessões</h3>
-        <p>Divórcios e partilhas judiciais. Participações fiscais de óbito.</p>
-      </div>
-      <div class="card">
-        <div class="n"></div>
-        <h3>Arrendamentos</h3>
-        <p>Elaboração e tratamento de contratos de arrendamento.</p>
-      </div>
-      <div class="card">
-        <div class="n"></div>
-        <h3>Atos e certificações</h3>
-        <p>Reconhecimento de assinaturas. Procurações.</p>
-      </div>
-      <div class="card">
-        <div class="n"></div>
-        <h3>Consultoria</h3>
-        <p>Consultoria fiscal, administrativa e civil.</p>
-      </div>
+    <p class="sub">São muitos os atos que trato, organizados aqui por área. Toque numa área para ver o detalhe.</p>
+
+    <div class="svc-list">
+
+      <details class="svc" open>
+        <summary>
+          <span class="svc-t">Documentos particulares autenticados</span>
+          <span class="svc-d">Transmissão de imóveis</span>
+        </summary>
+        <div class="svc-body">
+          <p class="svc-note">Os documentos particulares autenticados (DPAs) são a via, feita por Solicitador, para os atos de transmissão do direito de propriedade de imóveis — a alternativa à escritura no cartório.</p>
+          <ul class="svc-items">
+            <li>Compra e venda</li>
+            <li>Doações</li>
+            <li>Partilhas <em>mortis causa</em></li>
+            <li>Partilhas por divórcio</li>
+            <li>Permutas de bens imóveis</li>
+            <li>Cessão de quinhões hereditários (onerosa ou gratuita)</li>
+            <li>Propriedade horizontal</li>
+            <li>Constituição de hipoteca</li>
+            <li>Divisão de coisa comum</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="svc">
+        <summary>
+          <span class="svc-t">Contratos</span>
+          <span class="svc-d">Da promessa ao arrendamento</span>
+        </summary>
+        <div class="svc-body">
+          <ul class="svc-items">
+            <li>Promessa de compra e venda</li>
+            <li>Promessa de partilha</li>
+            <li>Arrendamento</li>
+            <li>Contrato de trabalho</li>
+            <li>Empreitadas</li>
+            <li>Comodato</li>
+            <li>Prestação de serviços</li>
+            <li>Outros contratos</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="svc">
+        <summary>
+          <span class="svc-t">Família e sucessões</span>
+          <span class="svc-d">Heranças, testamentos, divórcios e partilhas</span>
+        </summary>
+        <div class="svc-body">
+          <ul class="svc-items">
+            <li>Documentos para a escritura de habilitação de herdeiros</li>
+            <li>Documentos para a realização de testamentos</li>
+            <li>Divórcios com consentimento e responsabilidades parentais dos menores</li>
+            <li>Partilhas judiciais e extrajudiciais</li>
+            <li>Participações fiscais dos óbitos</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="svc">
+        <summary>
+          <span class="svc-t">Direito comercial e de sociedades</span>
+          <span class="svc-d">Constituir e gerir a sua empresa</span>
+        </summary>
+        <div class="svc-body">
+          <ul class="svc-items">
+            <li>Constituição de sociedades</li>
+            <li>Cessão de quotas</li>
+            <li>Alterações da atividade ou da sede</li>
+            <li>Transformação de empresas</li>
+            <li>Registo comercial em geral</li>
+            <li>Registo do Beneficiário Efetivo (RCBE)</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="svc">
+        <summary>
+          <span class="svc-t">Atos notariais e certificações</span>
+          <span class="svc-d">Assinaturas, procurações e autenticações</span>
+        </summary>
+        <div class="svc-body">
+          <ul class="svc-items">
+            <li>Reconhecimento de assinaturas de pessoas singulares e coletivas</li>
+            <li>Procurações</li>
+            <li>Autenticação de documentos</li>
+            <li>Certificados de tradução</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="svc">
+        <summary>
+          <span class="svc-t">Registos</span>
+          <span class="svc-d">Predial e automóvel</span>
+        </summary>
+        <div class="svc-body">
+          <ul class="svc-items">
+            <li>Registo predial</li>
+            <li>Registo automóvel</li>
+          </ul>
+        </div>
+      </details>
+
     </div>
+
+    <p class="svc-closing">E ainda consultoria fiscal, administrativa e civil, e demais procedimentos administrativos. Não encontra o que precisa? <a href="tel:+351964177345">Ligue-me</a> e digo-lhe se posso ajudar.</p>
   </div>
 </section>
 
@@ -277,8 +366,8 @@
       </div>
       <div class="vbox">
         <div class="n">03</div>
-        <h3>Inscrita na OSAE</h3>
-        <p>Profissional habilitada e regulada pela Ordem dos Solicitadores.</p>
+        <h3>+30 anos de prática</h3>
+        <p>Uma vida a tratar dos atos que dão segurança a pessoas e patrimónios.</p>
       </div>
       <div class="vbox">
         <div class="n">04</div>
@@ -296,19 +385,19 @@
     <p class="sub">Algumas dúvidas comuns. Se a sua não estiver aqui, ligue-me e explico com gosto.</p>
     <details>
       <summary>O que faz um Solicitador?</summary>
-      <div class="a">Presta apoio jurídico em atos como registos, contratos, autenticação de documentos, arrendamentos, sucessões e consultoria. É um profissional do foro, licenciado e inscrito na OSAE, próximo e acessível para as questões legais do dia a dia.</div>
+      <div class="a">Presta apoio jurídico em atos como documentos autenticados, transmissão de imóveis, contratos, sucessões, atos notariais, direito comercial e registos. É um profissional do foro, licenciado e inscrito na OSAE, próximo e acessível para as questões legais do dia a dia.</div>
     </details>
     <details>
-      <summary>Um Solicitador pode autenticar documentos?</summary>
-      <div class="a">Sim. Posso elaborar e autenticar documentos particulares — compra e venda, doações, partilhas — e reconhecer assinaturas, com a mesma validade legal exigida para esses atos.</div>
+      <summary>O que é um documento particular autenticado (DPA)?</summary>
+      <div class="a">Em Portugal, a transmissão de imóveis faz-se por escritura, feita nos cartórios, ou por documento particular autenticado, feito por Solicitador ou Advogado. O DPA tem, para esses atos, a mesma validade legal — e permite tratar compra e venda, doações, partilhas, hipotecas e outros diretamente comigo.</div>
     </details>
     <details>
-      <summary>Que registos posso tratar?</summary>
-      <div class="a">Registo Predial, Automóvel e Comercial. Trato do processo por si, desde a preparação dos documentos até à conclusão do registo.</div>
+      <summary>Um Solicitador pode autenticar documentos e reconhecer assinaturas?</summary>
+      <div class="a">Sim. Posso elaborar e autenticar documentos particulares, reconhecer assinaturas de pessoas singulares e coletivas, fazer procurações e certificar traduções, com a validade legal exigida para cada ato.</div>
     </details>
     <details>
       <summary>Como marco uma reunião?</summary>
-      <div class="a">O atendimento é por telefone e no escritório. Ligue para o 964 177 345 dentro do horário (9h00 – 18h00, encerrado às terças-feiras) e combinamos a melhor altura para falar.</div>
+      <div class="a">O atendimento presencial faz-se preferencialmente às segundas de manhã, quartas à tarde e sextas de manhã. Ligue para o 964 177 345 dentro do horário (9h00 – 18h00, encerrado às terças-feiras) ou use o formulário de marcação, e combinamos a melhor altura para falar.</div>
     </details>
   </div>
 </section>
@@ -317,7 +406,7 @@
   <div class="wrap">
     <div class="kicker">Marcar reunião</div>
     <h2 class="title">Vamos falar pessoalmente</h2>
-    <p class="sub">As reuniões presenciais fazem-se nestes períodos. Outros horários, combinando comigo diretamente.</p>
+    <p class="sub">As reuniões presenciais fazem-se preferencialmente nestes períodos. Outros horários, combinando comigo diretamente.</p>
     <div class="windows">
       <span class="w"><strong>Segunda</strong> · manhã</span>
       <span class="w"><strong>Quarta</strong> · tarde</span>
