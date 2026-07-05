@@ -137,6 +137,11 @@
   .cbox .v.small{font-size:19px;line-height:1.35}
   .cbox .v a:hover{color:var(--crimson)}
 
+  /* Toast — desktop call feedback */
+  .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(16px);background:var(--ink);color:#fff;font-family:var(--sans);font-size:14px;font-weight:500;padding:12px 20px;border-radius:8px;box-shadow:0 8px 28px rgba(28,28,28,.22);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:100;max-width:calc(100% - 32px);text-align:center}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  @media(prefers-reduced-motion:reduce){.toast{transition:opacity .25s}}
+
   /* Footer */
   footer{background:var(--paper-warm);border-top:1px solid var(--rule);padding:40px 0}
   .foot{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between;font-size:13px;color:var(--muted)}
@@ -496,6 +501,40 @@
         'mailto:carlasolicitadora@hotmail.com' +
         '?subject=' + encodeURIComponent(subject) +
         '&body=' + encodeURIComponent(body);
+    });
+  })();
+
+  // Call buttons. On a phone, a tel: link opens the dialer — leave it. On a
+  // desktop/PC a tel: click usually does nothing, which reads as broken, so on
+  // pointer devices we copy the number and confirm it instead of a dead click.
+  // The number is also printed on every button, so it is never hidden.
+  (function () {
+    var NUM_DISPLAY = '964 177 345';
+    var NUM_COPY = '+351 964 177 345';
+    var isDesktop = !!(window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches);
+    var toastEl = null, toastTimer = null;
+    function toast(msg) {
+      if (!toastEl) { toastEl = document.createElement('div'); toastEl.className = 'toast'; document.body.appendChild(toastEl); }
+      toastEl.textContent = msg;
+      // force reflow so the transition runs when re-shown quickly
+      void toastEl.offsetWidth;
+      toastEl.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 2800);
+    }
+    var links = document.querySelectorAll('a[href^="tel:"]');
+    Array.prototype.forEach.call(links, function (a) {
+      a.addEventListener('click', function (e) {
+        if (!isDesktop) return; // phone / tablet: let it dial natively
+        e.preventDefault();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(NUM_COPY)
+            .then(function () { toast('Número copiado: ' + NUM_DISPLAY); })
+            .catch(function () { toast('Ligue para ' + NUM_DISPLAY); });
+        } else {
+          toast('Ligue para ' + NUM_DISPLAY);
+        }
+      });
     });
   })();
 </script>
