@@ -47,6 +47,12 @@
   .hero-badge .osae{width:clamp(158px,21vw,224px);height:auto;display:block;margin:0 auto}
   .hero-badge .cap{margin-top:18px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
   .hero-badge .cap strong{color:var(--ink)}
+  /* Hero portrait — a real photo of Carla in her office (round 4). */
+  .hero-photo{flex:none;text-align:center}
+  .hero-photo .portrait{width:clamp(232px,31vw,336px);height:auto;display:block;border-radius:14px;border:1px solid var(--rule);box-shadow:0 18px 46px rgba(28,28,28,.18)}
+  .hero-photo .cap{margin-top:18px;display:flex;align-items:center;justify-content:center;gap:9px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .hero-photo .cap strong{color:var(--ink)}
+  .hero-photo .osae-mini{height:28px;width:auto;flex:none}
   .hero-text{min-width:0}
   .hero .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--crimson);font-weight:600;margin-bottom:20px}
   .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(46px,9vw,84px);line-height:1.02;letter-spacing:.005em}
@@ -196,9 +202,9 @@
 
 <section class="hero">
   <div class="wrap hero-in">
-    <div class="hero-badge">
-      <img class="osae" src="assets/osae-logo.png" alt="Emblema da Ordem dos Solicitadores e dos Agentes de Execução (OSAE)" />
-      <div class="cap">Inscrita na <strong>OSAE</strong> · Cédula 1878</div>
+    <div class="hero-photo">
+      <img class="portrait" src="assets/carla.jpg" alt="Carla Domingues, Solicitadora, no seu escritório no Cadaval" />
+      <div class="cap"><img class="osae-mini" src="assets/osae-logo.png" alt="" /> Inscrita na <strong>OSAE</strong> · Cédula 1878</div>
     </div>
     <div class="hero-text">
       <div class="eyebrow">Solicitadora · Cadaval e todo o país</div>
