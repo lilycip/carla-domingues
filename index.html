@@ -130,6 +130,14 @@
   .field input:focus,.field textarea:focus{outline:none;border-color:var(--crimson)}
   .field textarea{min-height:120px;resize:vertical}
   .book .note{font-size:13px;color:var(--muted);margin-top:14px}
+  /* Cal.com scheduler embed */
+  .booking{margin-top:8px}
+  .cal-embed{min-height:600px;background:var(--paper);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+  .cal-embed iframe{width:100%;border:0;display:block}
+  .cal-loading{padding:44px 26px;font-size:15px;color:var(--muted);font-style:italic}
+  .cal-note{margin-top:16px;font-size:14px;color:var(--ink-soft)}
+  .cal-note a{color:var(--crimson);font-weight:600}
+  @media(max-width:600px){.cal-embed{min-height:520px}}
 
   /* Contact */
   .contact{background:var(--ink);color:#f3efe9}
@@ -423,26 +431,23 @@
       <span class="w"><strong>Quarta</strong> · tarde</span>
       <span class="w"><strong>Sexta</strong> · manhã</span>
     </div>
-    <form class="form" id="bookform">
-      <div class="field">
-        <label for="f-nome">Identificação</label>
-        <input id="f-nome" name="nome" type="text" required autocomplete="name" />
+    <!--
+      Cal.com inline scheduler.
+      SETUP (at Carla's office, on her computer, her credentials):
+        1. Create her Cal.com account + connect her Outlook calendar.
+        2. Create the "Reunião" event type (request-to-confirm ON; custom
+           questions: Número de processo (opcional) + Assunto).
+        3. Cal.com > Embed > Inline > brand colour #9b1b2b > copy the snippet.
+        4. Paste the generated <script> just before </section> below AND set
+           its calLink to her event (e.g. "carla-domingues/reuniao").
+      Until the snippet is pasted, the phone fallback below is what shows.
+    -->
+    <div class="booking">
+      <div id="cal-booking" class="cal-embed" aria-live="polite">
+        <p class="cal-loading">A carregar o calendário de marcações…</p>
       </div>
-      <div class="field">
-        <label for="f-contacto">Contacto</label>
-        <input id="f-contacto" name="contacto" type="text" required placeholder="Telefone ou email" />
-      </div>
-      <div class="field">
-        <label for="f-processo">Número de processo <span class="opt">(se tiver)</span></label>
-        <input id="f-processo" name="processo" type="text" />
-      </div>
-      <div class="field">
-        <label for="f-assunto">Assunto</label>
-        <textarea id="f-assunto" name="assunto" required></textarea>
-      </div>
-      <button class="btn-primary" type="submit">Enviar pedido de marcação</button>
-      <p class="note">Ao enviar, abre-se o seu email já preenchido com os dados, para confirmar o envio a Carla Domingues.</p>
-    </form>
+      <p class="cal-note">Prefere falar diretamente? <a href="tel:+351964177345">Ligue para o 964&nbsp;177&nbsp;345</a> dentro do horário (9h00–18h00, encerrado às terças-feiras).</p>
+    </div>
   </div>
 </section>
 
@@ -484,31 +489,10 @@
 </footer>
 
 <script>
-  // Scheduling form → opens the visitor's own email, pre-filled, addressed to
-  // Carla. No third-party form processor: every request goes straight to her
-  // inbox, which keeps confidential client details off any outside service.
-  (function () {
-    var f = document.getElementById('bookform');
-    if (!f) return;
-    f.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var val = function (id) { var el = document.getElementById(id); return el ? (el.value || '').trim() : ''; };
-      var nome = val('f-nome');
-      var contacto = val('f-contacto');
-      var processo = val('f-processo');
-      var assunto = val('f-assunto');
-      var subject = 'Pedido de marcação' + (nome ? (' — ' + nome) : '');
-      var body =
-        'Identificação: ' + nome + '\n' +
-        'Contacto: ' + contacto + '\n' +
-        (processo ? ('Número de processo: ' + processo + '\n') : '') +
-        'Assunto:\n' + assunto + '\n';
-      window.location.href =
-        'mailto:carlasolicitadora@hotmail.com' +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(body);
-    });
-  })();
+  // Meeting booking is handled by the Cal.com inline scheduler in #marcar
+  // (added at office setup): the visitor picks a slot, it lands as a
+  // request-to-confirm in Carla's Cal.com and syncs to her Outlook calendar.
+  // No mailto form to wire here anymore.
 
   // Call buttons. On a phone, a tel: link opens the dialer — leave it. On a
   // desktop/PC a tel: click usually does nothing, which reads as broken, so on
